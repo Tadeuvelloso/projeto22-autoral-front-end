@@ -1,5 +1,5 @@
 module.exports = {
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, "amd": true, "node": true },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -8,8 +8,10 @@ module.exports = {
   ],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh', 'styled'],
   rules: {
     'react-refresh/only-export-components': 'warn',
+    "styled/require-macro": [2],
+    "styled/unused-macro": [2]
   },
 }
